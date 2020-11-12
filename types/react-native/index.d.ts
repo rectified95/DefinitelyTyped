@@ -503,6 +503,16 @@ export interface PressableProps extends AccessibilityProps, Omit<ViewProps, 'sty
     onLongPress?: null | ((event: GestureResponderEvent) => void);
 
     /**
+     * Windows-only: Callback invoked when the element receives focus.
+     */
+    onFocus?: (e: NativeSyntheticEvent<TargetedEvent>) => void;
+
+    /**
+     * Windows-only: Callback invoked when the element loses focus.
+     */
+    onBlur?: (e: NativeSyntheticEvent<TargetedEvent>) => void;
+
+    /**
      * Either children or a render prop that receives a boolean reflecting whether
      * the component is currently pressed.
      */
